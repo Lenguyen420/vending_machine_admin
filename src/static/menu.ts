@@ -5,10 +5,8 @@ import {
   CreditCardOutlined,
   DashboardOutlined,
   DatabaseOutlined,
-  SettingOutlined,
   SwapOutlined,
   TeamOutlined,
-  ToolOutlined,
 } from '@ant-design/icons'
 export const groups = [
   { label: 'Tổng quan', items: [{ path: '/', label: 'Bảng điều khiển', icon: DashboardOutlined }] },
@@ -33,8 +31,6 @@ export const groups = [
     label: 'Hệ thống',
     items: [
       { path: '/alerts', label: 'Cảnh báo', icon: BellOutlined },
-      // { path: '/maintenance', label: 'Bảo trì', icon: ToolOutlined },
-      // { path: '/settings', label: 'Cài đặt', icon: SettingOutlined },
     ],
   },
 ]
