@@ -33,8 +33,8 @@ export const groups = [
     label: 'Hệ thống',
     items: [
       { path: '/alerts', label: 'Cảnh báo', icon: BellOutlined },
-      { path: '/maintenance', label: 'Bảo trì', icon: ToolOutlined },
-      { path: '/settings', label: 'Cài đặt', icon: SettingOutlined },
+      // { path: '/maintenance', label: 'Bảo trì', icon: ToolOutlined },
+      // { path: '/settings', label: 'Cài đặt', icon: SettingOutlined },
     ],
   },
 ]
