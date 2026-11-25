@@ -1,0 +1,58 @@
+import type { MachineInput, MachineStatus } from '../types/machine'
+export const machineSeeds: { input: MachineInput; rows: number; columns: number; status: MachineStatus }[] = [
+  {
+    name: 'Máy bán hàng 01',
+    location: 'Trường Tiểu học A',
+    rows: 3,
+    columns: 4,
+    status: 'ONLINE',
+    methods: ['INTERNAL_CARD', 'BANK_CARD'],
+  },
+  {
+    name: 'Máy bán hàng 02',
+    location: 'Văn phòng B',
+    rows: 4,
+    columns: 5,
+    status: 'ONLINE',
+    methods: ['BANK_CARD', 'QR'],
+  },
+  {
+    name: 'Máy bán hàng 03',
+    location: 'Trung tâm Anh ngữ C',
+    rows: 3,
+    columns: 4,
+    status: 'OFFLINE',
+    methods: ['INTERNAL_CARD'],
+  },
+  {
+    name: 'Máy bán hàng 04',
+    location: 'Khu thể thao D',
+    rows: 4,
+    columns: 4,
+    status: 'MAINTENANCE',
+    methods: ['INTERNAL_CARD', 'BANK_CARD'],
+  },
+  {
+    name: 'Máy bán hàng 05',
+    location: 'Thư viện E',
+    rows: 3,
+    columns: 4,
+    status: 'ONLINE',
+    methods: ['BANK_CARD', 'QR', 'INTERNAL_CARD'],
+  },
+].map(({ name, location, rows, columns, status, methods }, i) => ({
+  rows,
+  columns,
+  status: status as MachineStatus,
+  input: {
+    name,
+    location,
+    model: i % 2 ? 'VendPro Plus' : 'VendPro S',
+    code: 'VM00' + (i + 1),
+    serial: 'VP-2600' + (i + 1),
+    manager: 'Quản lý khu vực ' + (i + 1),
+    terminal: 'TERM-00' + (i + 1),
+    reader: 'OK',
+    methods: methods as MachineInput['methods'],
+  },
+}))

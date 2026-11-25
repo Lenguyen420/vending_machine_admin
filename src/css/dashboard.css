@@ -1,0 +1,53 @@
+.page-stack > .page-heading {
+  margin-bottom: 0;
+}
+.status-chart {
+  height: 166px;
+  position: relative;
+}
+.donut-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+.donut-label strong,
+.donut-label small {
+  display: block;
+}
+.donut-label strong {
+  font-size: 26px;
+}
+.donut-label small {
+  color: var(--muted);
+}
+.chart-key {
+  list-style: none;
+  margin: 10px auto 0;
+  padding: 0;
+  max-width: 310px;
+}
+.chart-key a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  padding: 6px 0;
+}
+.chart-key a:hover {
+  color: var(--brand);
+}
+.chart-key i {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+.chart-key strong {
+  margin-left: auto;
+}
+.clean-list .stat-icon {
+  flex: none;
+  margin: 0;
+}

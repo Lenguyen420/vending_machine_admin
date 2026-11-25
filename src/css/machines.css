@@ -1,0 +1,154 @@
+.machine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 16px;
+}
+.machine-card .machine-image {
+  height: 100px;
+  width: 100%;
+  object-fit: contain;
+  background: #eff4ff;
+  border-radius: 9px;
+  margin-bottom: 12px;
+  padding: 9px;
+}
+.machine-card h2 {
+  margin-bottom: 5px;
+}
+.machine-card .inline-actions {
+  margin-top: 12px;
+}
+.machine-thumb {
+  width: 39px;
+  height: 39px;
+  border-radius: 7px;
+  background: #edf3ff;
+  object-fit: contain;
+  padding: 4px;
+}
+.shelf-face {
+  border: 1px solid #d5dfef;
+  border-radius: 14px;
+  background: #eaf0f8;
+  padding: 12px 15px 15px;
+  overflow: auto;
+}
+.shelf-face-heading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #405a7b;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.shelf-row {
+  margin-top: 10px;
+}
+.shelf-label {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #375476;
+}
+.shelf-slots {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(var(--slots), minmax(117px, 1fr));
+}
+.slot-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  min-width: 0;
+  text-align: left;
+  cursor: pointer;
+  color: var(--ink);
+  background: white;
+  border: 1px solid #dbe3f0;
+  border-top: 3px solid #65b58e;
+  border-radius: 9px;
+  padding: 8px;
+}
+.slot-card:hover,
+.slot-card.selected {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 1px var(--brand);
+}
+.slot-card.low {
+  border-top-color: #f4a536;
+}
+.slot-card.empty {
+  border-top-color: #ee6577;
+}
+.slot-card.inactive,
+.slot-card.unassigned {
+  border-top-color: #9aa9bc;
+}
+.slot-card:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+.slot-card-top,
+.slot-count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  font-size: 12px;
+}
+.slot-card-top .status-tag {
+  padding: 2px 5px;
+  font-size: 10px;
+}
+.slot-card .product-thumb {
+  width: 100%;
+  height: 50px;
+}
+.slot-card .product-name {
+  min-height: 32px;
+  font-size: 12px;
+  line-height: 1.25;
+}
+.slot-card .money {
+  font-size: 13px;
+  font-weight: 700;
+}
+.slot-card progress {
+  width: 100%;
+  height: 6px;
+  accent-color: #43a47a;
+}
+.slot-card.low progress,
+.slot-card.empty progress {
+  accent-color: #e38b29;
+}
+.shelf-edit {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  margin-top: 12px;
+}
+.shelf-edit-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+.wizard-slot {
+  padding: 8px;
+  background: #f5f7fb;
+  border-radius: 8px;
+  display: grid;
+  gap: 5px;
+}
+.wizard-slot .ant-select {
+  width: 100%;
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 12px;
+}
